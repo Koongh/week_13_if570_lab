@@ -16,9 +16,6 @@ class ProductEntry(
     val dynamicUrl: Uri = Uri.parse(dynamicUrl)
 
     companion object {
-        /**
-         * Loads a raw JSON at R.raw.products and converts it into a list of ProductEntry objects
-         */
         fun initProductEntryList(resources: Resources): List<ProductEntry> {
             val inputStream = resources.openRawResource(R.raw.products)
             val jsonProductsString = inputStream.bufferedReader().use(BufferedReader::readText)
